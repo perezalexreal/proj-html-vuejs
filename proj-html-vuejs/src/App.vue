@@ -15,7 +15,6 @@ export default {
   },
   data () {
     return {
-      logoPath: '../assets/logo-sidearea-1-1.png',
       nav : [
         'Home',
         'Pages',
@@ -30,5 +29,6 @@ export default {
 </script>
 
 <style lang="scss">
+@import './style/main.scss'
 
 </style>
