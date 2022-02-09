@@ -26,7 +26,7 @@
       <div class="post">
         <div class="poster">
           <div class="details-post">
-                   <div class="num-post">07</div>
+            <div class="num-post">07</div>
             <div class="date-post">May 18</div>
           </div>
           <img src="../assets/h-2-blog-img-1.jpg" alt="" />
@@ -67,25 +67,25 @@ export default {};
         left: 15px;
         top: 55px;
         width: 60px;
-       
 
         .num-post {
-            background: $green;
-             height: 35px;
-             text-align: center;
-             font-weight: 800;
-             font-size: 26px;
-             font-style: italic;
+          background: $green;
+          height: 40px;
+          text-align: center;
+          font-weight: 800;
+          font-size: 26px;
+          font-style: italic;
         }
         .date-post {
-                 background: $rose;
-             height: 35px;
-             font-size: 12px;
-             font-weight: 500;
-             text-align: center;
-             text-transform: uppercase;
-             vertical-align: middle;
-             line-height: 35px;
+          background: $rose;
+          height: 40px;
+          font-size: 12px;
+          font-weight: 500;
+          text-align: center;
+          text-transform: uppercase;
+          vertical-align: middle;
+          line-height: 35px;
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 81%, 0 100%);
         }
       }
     }
