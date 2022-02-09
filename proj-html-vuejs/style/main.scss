@@ -9,7 +9,10 @@
 
 
 $brd-beige: #e1c0b0;
+$rose: #F3D0C7;
 $text-color: #A6A6A6;
+$light-green: #D8F0E3;
+$green: #C0E1CF;
 
 a {
     width: auto;
@@ -38,4 +41,9 @@ button {
 .brd-beige {
     border: 2px solid $brd-beige;
     background-color: white;
+}
+
+.brd-lightgreen {
+    border: 2px solid $light-green;
+    background-color: $light-green;
 }

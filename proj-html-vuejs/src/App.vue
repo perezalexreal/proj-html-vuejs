@@ -1,37 +1,41 @@
 <template>
   <div id="app">
-<header-box :nav="nav" :logoPath="logoPath"/>
-<jumbotron-box/>
+    <header-box :nav="nav" :logoPath="logoPath" />
+    <jumbotron-box />
+    <section-images />
+    <section-working />
+    <section-contact/>
+    <section-blog/>
   </div>
 </template>
 
 <script>
-import HeaderBox from './components/HeaderBox.vue'
-import JumbotronBox from './components/JumbotronBox.vue'
+import HeaderBox from "./components/HeaderBox.vue";
+import JumbotronBox from "./components/JumbotronBox.vue";
+import SectionImages from "./components/SectionImages.vue";
+import SectionWorking from "./components/SectionWorking.vue";
+import SectionContact from "./components/SectionContact.vue";
+import SectionBlog from "./components/SectionBlog.vue";
 
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HeaderBox,
-    JumbotronBox
+    JumbotronBox,
+    SectionImages,
+    SectionWorking,
+    SectionContact,
+    SectionBlog
   },
-  data () {
+  data() {
     return {
-      nav : [
-        'Home',
-        'Pages',
-        'Portfolio',
-        'Blog',
-        'Shop',
-        'Elements',
-      ],
-    }
-  }
-}
+      nav: ["Home", "Pages", "Portfolio", "Blog", "Shop", "Elements"],
+    };
+  },
+};
 </script>
 
 <style lang="scss">
-@import './style/main.scss'
-
+@import "./style/main.scss";
 </style>
