@@ -8,4 +8,34 @@
 }
 
 
-$red: red;
+$brd-beige: #e1c0b0;
+$text-color: #A6A6A6;
+
+a {
+    width: auto;
+    max-width: fit-content;
+}
+
+button {
+    cursor: pointer;
+}
+
+.txt-color {
+    color: $text-color
+}
+
+.btn-cta {
+    padding: 12px 45px;
+}
+
+.btn-txt {
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.brd-beige {
+    border: 2px solid $brd-beige;
+    background-color: white;
+}
