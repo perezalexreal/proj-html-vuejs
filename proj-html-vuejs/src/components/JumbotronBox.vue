@@ -179,7 +179,7 @@ export default {
   width: 10px;
   height: 10px;
   background: $brd-beige;
-  margin: 0px 3px;
+  margin: 0px 6px;
   border-radius: 50px;
   cursor: pointer;
 }

@@ -4,22 +4,22 @@
             <h1> Working <span> process</span> </h1>
             <div class="box-features">
                 <div class="features">
-                    <img  src="../assets/svg/svg-8.svg"  alt="">
+                    <img  src="/img/work/1.png"  alt="">
                     <h1> First theres an idea</h1>
                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, deserunt molestiae!</p>
                 </div>
                 <div class="features">
-                    <img  src="../assets/svg/svg-8.svg"  alt="">
+                    <img  src="/img/work/2.png"  alt="">
                     <h1> Then we talk about</h1>
                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, deserunt molestiae!</p>
                 </div>
                 <div class="features">
-                    <img  src="../assets/svg/svg-8.svg"  alt="">
+                    <img  src="/img/work/3.png"  alt="">
                     <h1> And we think about</h1>
                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, deserunt molestiae!</p>
                 </div>
                 <div class="features">
-                    <img src="../assets/svg/svg-8.svg"  width="100px" alt="">
+                    <img src="/img/work/4.png" alt="">
                     <h1> So we draw along</h1>
                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, deserunt molestiae!</p>
                 </div>
@@ -72,10 +72,10 @@ export default {
 
             img {
                 background: #faf7f1;
-                width: 200px;
-                height: 200px;
+                width: 175px;
+                height: 175px;
                 border-radius: 100px;
-                padding: 20px;
+                padding: 65px;
             }
         }
     }
