@@ -1,17 +1,20 @@
 <template>
   <div>
     <div class="container-box">
-        <div class="arrow-slider">
-           <img src="../assets/arrow-left.png" alt="">
-          
-        </div>
+      <div class="arrow-slider">
+        <img @click="previewContent" src="../assets/arrow-left.png" alt="" />
+      </div>
       <div class="left-box">
-        <h1>Devotion that never <span> ends</span></h1>
+        <h1>
+          {{ sliderContent[currentIndex].title }}
+          <span> {{ sliderContent[currentIndex].italic }} </span>
+        </h1>
         <p class="txt-color">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eos in
-          optio excepturi natus illo ipsa dolor id aliquam quaerat!
+          {{ sliderContent[currentIndex].content }}
         </p>
-        <a href="#"> <button class="btn-cta brd-beige btn-txt">Read More</button></a>
+        <a href="#">
+          <button class="btn-cta brd-beige btn-txt">Read More</button></a
+        >
       </div>
       <div class="right-box">
         <div class="svgs">
@@ -35,22 +38,73 @@
           <img class="hero-img" src="../assets/h-2-slider-img-17.png" alt="" />
         </div>
       </div>
-              <div class="arrow-slider">
-            <img src="../assets/arrow-right.png" alt="">
-        </div>
+      <div class="arrow-slider">
+        <img @click="nextContent" src="../assets/arrow-right.png" alt="" />
+      </div>
     </div>
-    <div class="dots-container">
-        <div class="dots"></div>
-        <div class="dots"></div>
-        <div class="dots"></div>
+    <div class="container-dots">
+    <div
+      :class="['dots-container', currentIndex]"
+      v-for="(dots, i) in sliderContent"
+      :key="i"
+    >
+      <div :class="['dots', currentIndex == i ? 'current-dot' : '']"></div>
     </div>
+
+    </div>
+
+    <div></div>
   </div>
 </template>
 
 
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      currentIndex: 0,
+      sliderContent: [
+        {
+          title: "Devotion that never",
+          italic: "ends",
+          content:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eos in optio excepturi natus illo ipsa dolor id aliquam quaerat!",
+        },
+        {
+          title: "Another Title that never",
+          italic: "ends",
+          content:
+            "Incidunt qui quo porro error pariatur alias, debitis at. Sequi, quasi!",
+        },
+        {
+          title: "Second best ever title in the",
+          italic: "world",
+          content:
+            "Ipsum dolor sit amet, consectetur adipisicing elit. Eaque excepturi odit eos blanditiis libero iusto ea quis autem dignissimos ",
+        },
+      ],
+    };
+  },
+  methods: {
+    nextContent: function () {
+      if (this.currentIndex === this.sliderContent.length - 1) {
+        this.currentIndex = 0;
+      } else {
+        this.currentIndex++;
+      }
+      // todo -> e se arrivo alla fine dell'array?
+    },
+    previewContent: function () {
+      if (this.currentIndex === 0) {
+        this.currentIndex = this.sliderContent.length - 1;
+      } else {
+        this.currentIndex--;
+      }
+      // todo -> e se arrivo a 0?
+    },
+  },
+};
 </script>
 
 
@@ -65,7 +119,7 @@ export default {};
   height: 100%;
 
   .left-box {
-      width: 60%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -76,7 +130,6 @@ export default {};
       white-space: 2px;
       font-weight: 300;
       line-height: 1em;
-
 
       span {
         font-weight: 800;
@@ -89,44 +142,56 @@ export default {};
     }
   }
   .right-box {
-      display: flex;
-      width: 40%;
-      text-align: left;
+    display: flex;
+    width: 40%;
+    text-align: left;
   }
 }
 
 .svgs {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 
-    img {
-        width: 40px;
-    }
+  img {
+    width: 40px;
+  }
 }
 
 .arrow-slider {
-    margin: 0px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 25px;
-    
-    img {
-         cursor: pointer;
-    }
+  margin: 0px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25px;
+
+  img {
+    cursor: pointer;
+  }
 }
 
 .dots-container {
-    display: flex;
-    justify-content: center;
-    .dots {
-        width: 10px;
-        height: 10px;
-        background: $brd-beige;
-        margin: 0px 8px;
-        border-radius: 50px;
-        cursor: pointer
-    }
+  display: flex;
+  justify-content: center;
+}
+
+.dots {
+  width: 10px;
+  height: 10px;
+  background: $brd-beige;
+  margin: 0px 3px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.current-dot {
+  width: 15px;
+  height: 15px;
+}
+
+.container-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

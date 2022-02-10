@@ -6,6 +6,7 @@
     <section-working />
     <section-contact/>
     <section-blog/>
+    <footer-box/>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import SectionImages from "./components/SectionImages.vue";
 import SectionWorking from "./components/SectionWorking.vue";
 import SectionContact from "./components/SectionContact.vue";
 import SectionBlog from "./components/SectionBlog.vue";
+import FooterBox from "./components/FooterBox.vue";
 
 
 export default {
@@ -26,7 +28,8 @@ export default {
     SectionImages,
     SectionWorking,
     SectionContact,
-    SectionBlog
+    SectionBlog,
+    FooterBox
   },
   data() {
     return {

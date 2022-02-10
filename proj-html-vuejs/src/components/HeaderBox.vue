@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="header-box">
-            <img class="logo-img"  src="../assets/logo-sidearea-1.png" alt="">
+            <img class="logo-img" src="../assets/logo-sidearea-1.png" alt="">
             <div class="menu-right">
             <div class="container-links">
                 <ul v-for="(link,index) in nav" :key="index">

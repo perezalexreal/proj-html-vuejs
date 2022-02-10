@@ -1,38 +1,16 @@
 <template>
   <div>
     <div class="container-posts">
-      <div class="post">
+      <div class="post" v-for="(post,index) in posts" :key="index">
         <div class="poster">
           <div class="details-post">
-            <div class="num-post">07</div>
-            <div class="date-post">May 18</div>
+            <div class="num-post">{{ post.num}}</div>
+            <div class="date-post">{{ post.date}}</div>
           </div>
-          <img src="../assets/h-2-blog-img-1.jpg" alt="" />
+          <img :src="post.urlImage" alt="" />
         </div>
-        <p>This way, loves: a detailed guide through new design</p>
-        <p>By Emily Fields</p>
-      </div>
-      <div class="post">
-        <div class="poster">
-          <div class="details-post">
-            <div class="num-post">07</div>
-            <div class="date-post">May 18</div>
-          </div>
-          <img src="../assets/h-2-blog-img-1.jpg" alt="" />
-        </div>
-        <p>This way, loves: a detailed guide through new design</p>
-        <p>By Emily Fields</p>
-      </div>
-      <div class="post">
-        <div class="poster">
-          <div class="details-post">
-            <div class="num-post">07</div>
-            <div class="date-post">May 18</div>
-          </div>
-          <img src="../assets/h-2-blog-img-1.jpg" alt="" />
-        </div>
-        <p>This way, loves: a detailed guide through new design</p>
-        <p>By Emily Fields</p>
+        <p>{{ post.content }}</p>
+        <p> <span>by </span>{{ post.author }}</p>
       </div>
     </div>
   </div>
@@ -41,7 +19,35 @@
 
 
 <script>
-export default {};
+export default {
+  data(){
+    return {
+      posts: [
+        {
+          num: '07',
+          date: `May' 19`,
+          content: 'This way, loves: a detailed guide through new design',
+          urlImage: '/img/h-2-blog-img-1.jpg',
+          author: 'Emily Fields',
+        },
+        {
+          num: '07',
+          date:`May' 19`,
+          content: 'I try to give people a different way of looking art',
+          urlImage: '/img/h-2-blog-img-2.jpg',
+          author: 'Emily Fields',
+        },
+        {
+          num: '07',
+          date:`May' 19`,
+          content: 'introduce Richard Laperrière of those amazing features',
+          urlImage: '/img/h-2-blog-img-3.jpg',
+          author: 'Emily Fields',
+        }
+      ]
+    }
+  }
+};
 </script>
 
 
