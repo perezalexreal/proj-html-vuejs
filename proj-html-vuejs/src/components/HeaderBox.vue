@@ -3,6 +3,7 @@
         <div class="header-box">
             <img class="logo-img" src="../assets/logo-sidearea-1.png" alt="">
             <div class="menu-right">
+                <!-- Ciclo tutti gli elementi dell'array nav -->
             <div class="container-links">
                 <ul v-for="(link,index) in nav" :key="index">
                     <li> {{ link }} </li>
@@ -17,7 +18,7 @@
 
 
 <script>
-
+// Richiamo l'array in App vue 
 export default {
     props: {
         nav: Array,

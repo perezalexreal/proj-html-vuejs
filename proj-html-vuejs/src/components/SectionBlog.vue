@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="container-posts">
+       <!-- Ciclo tutti gli elementi dell array posts  -->
       <div class="post" v-for="(post,index) in posts" :key="index">
         <div class="poster">
           <div class="details-post">
@@ -10,7 +11,7 @@
           <img :src="post.urlImage" alt="" />
         </div>
         <p>{{ post.content }}</p>
-        <p> <span>by </span>{{ post.author }}</p>
+        <p class="author"> <span>by </span>{{ post.author }}</p>
       </div>
     </div>
   </div>
@@ -40,7 +41,7 @@ export default {
         {
           num: '07',
           date:`May' 19`,
-          content: 'introduce Richard Laperrière of those amazing features',
+          content: 'Introduce Richard Laperrière of those amazing features',
           urlImage: '/img/h-2-blog-img-3.jpg',
           author: 'Emily Fields',
         }
@@ -96,5 +97,10 @@ export default {
       }
     }
   }
+}
+
+.author {
+  font-style: italic;
+  font-size: 14px;
 }
 </style>

@@ -32,6 +32,7 @@ export default {
     FooterBox
   },
   data() {
+    // Array utilizzato in HeaderBox attraverso i props
     return {
       nav: ["Home", "Pages", "Portfolio", "Blog", "Shop", "Elements"],
     };

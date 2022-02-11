@@ -14,6 +14,7 @@
         </div>
         <div class="box">
             <p>Stai in touch with us</p>
+                 <!-- Ciclo tutti gli elementi dell array social per i link -->
             <div class="social-links" v-for="(social,index) in socials" :key="index">
                <a :href="social.urlLogo"><img :src="social.urlImage" alt=""></a> 
             </div>
